@@ -1,7 +1,7 @@
 <?php
 $stad="";
 if($_SERVER['REQUEST_METHOD']==="POST") {
-    $stad=$_POST['stad'];
+    $stad=filter_input(INPUT_POST, 'stad', FILTER_SANITIZE_SPECIAL_CHARS);
 }
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD']==="POST") {
         $result=mysqli_query($dbConn, $sql);
 
         // Ta hand om svar
-        if($result) {
+        if($result && mysqli_num_rows($result)) {
             while($rad=mysqli_fetch_array($result)) {
                 echo "$rad[name]<br>";
             }
