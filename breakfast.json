@@ -1,0 +1,24 @@
+{
+  "Breakfast menu": {
+    "food": [
+      {
+        "name": "Belgian Waffles",
+        "price": 5.95,
+        "description": "Two of our famous Belgian Waffles with plenty of maple syrup",
+        "energy": {
+          "measure": "kcal",
+          "value": 650
+        }
+      },
+      {
+        "name": "Strawberry Belgian Waffles",
+        "price": 5.95,
+        "description": "Light Belgian waffles with strawberries and whipped cream",
+        "energy": {
+          "measure": "kJ",
+          "value": 200
+        }
+      }
+    ]
+  }
+}
